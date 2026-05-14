@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% block body %}
+{{body}}
+{% for e in email %}
+    <p>Email: {{e.email}}</p>
+{% endfor %}
+{% endblock body %}
