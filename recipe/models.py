@@ -7,9 +7,10 @@ class Recipe(models.Model):
     ingredient = models.CharField(max_length=50)
     instruction = models.TextField()
     time = models.IntegerField()
+    level = models.CharField(max_length=50)
     
     def __str__(self):
-        return f'{self.name}.recipe'
+        return self.name
     
 # model -> makemigrations -> migration file created -> migrate -> database reflect
 # table_name: app_modelname

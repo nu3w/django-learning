@@ -1,0 +1,7 @@
+Recipe
+
+- name              Char
+- ingredients       Char
+- instructions      Char
+- level             Char
+- time              int

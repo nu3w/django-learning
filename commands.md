@@ -29,3 +29,39 @@ python manage.py startapp app_name
 # run sever
 python manage.py runserver
 
+# migration file create
+python manage.py makemigrations
+
+python manage.py migrate
+
+# create superuser
+python manage.py createsuperuser
+
+# shell
+python manage.py shell
+
+# CRUD: Create, Retrieve, Updata, Delete
+
+# get all data
+model_name.objects.all()        
+
+# create data
+model_name.objetcs.create(field1 = "...", field2 = "...", >>>)
+
+# retrieve: single data 
+model_name.objects.get()        # or
+a = model_name.objects.get()  
+a.field1
+a.field2
+
+# update: 
+a.field1 = new_data
+a.field2 = new_data
+a.save()
+
+# delete: 
+- retrieve data
+- a.delete()
+
+# filter
+model_name.objects.filter(field1 = "...", field2 = "...", ...)
