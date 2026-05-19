@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% block body %}
+
+<h3>Recipe</h3>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Ingredients</th>
+                <th scope="col">Instruction</th>
+                <th scope="col">Time</th>
+                <th scope="col">Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for recipe in recipes %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{recipe.name}}</td>
+                <td>{{recipe.ingredient}}</td>
+                <td>{{recipe.instruction}}</td>
+                <td>{{recipe.time}}</td>
+                <td>{{recipe.level}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock body %}
